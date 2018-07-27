@@ -16,7 +16,7 @@
             android:id="@+id/product_image"
             android:layout_width="match_parent"
             android:layout_height="@dimen/shr_product_card_image_height"
-            android:background="?attr/colorPrimaryDark"
+            android:background="#dedede"
             android:scaleType="centerCrop" />
 
         <LinearLayout
