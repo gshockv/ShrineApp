@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:name="com.google.codelabs.mdc.kotlin.shrine.application.ShrineApplication"
         android:theme="@style/Theme.Shrine">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

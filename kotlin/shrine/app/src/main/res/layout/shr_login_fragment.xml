@@ -29,10 +29,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="132dp"
+            android:layout_marginBottom="64dp"
             android:text="@string/shr_app_name"
-            android:textAppearance="@style/TextAppearance.Shrine.Title" />
+            android:textAppearance="@style/TextAppearance.Shrine.Title"
+            android:textAllCaps="true"
+            android:textSize="16sp" />
 
+        <!-- inputs -->
         <android.support.design.widget.TextInputLayout
             style="@style/Widget.Shrine.TextInputLayout"
             android:layout_width="match_parent"
@@ -41,14 +44,13 @@
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1" />
+                android:layout_height="wrap_content" />
+
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/password_text_input"
             style="@style/Widget.Shrine.TextInputLayout"
+            android:id="@+id/password_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/shr_hint_password"
@@ -58,9 +60,11 @@
                 android:id="@+id/password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"/>
+
         </android.support.design.widget.TextInputLayout>
 
+        <!-- buttons -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -72,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:text="@string/shr_button_next" />
+                android:text="@string/shr_button_next"/>
 
             <android.support.design.button.MaterialButton
                 android:id="@+id/cancel_button"
@@ -83,8 +87,9 @@
                 android:layout_marginRight="12dp"
                 android:layout_toStartOf="@id/next_button"
                 android:layout_toLeftOf="@id/next_button"
-                android:text="@string/shr_button_cancel" />
-
+                android:text="@string/shr_button_cancel"
+                />
         </RelativeLayout>
+
     </LinearLayout>
 </ScrollView>

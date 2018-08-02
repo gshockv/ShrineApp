@@ -15,8 +15,11 @@ import android.widget.ImageView
  * the Y-axis when the navigation icon in the toolbar is pressed.
  */
 class NavigationIconClickListener @JvmOverloads internal constructor(
-        private val context: Context, private val sheet: View, private val interpolator: Interpolator? = null,
-        private val openIcon: Drawable? = null, private val closeIcon: Drawable? = null) : View.OnClickListener {
+        private val context: Context,
+        private val sheet: View,
+        private val interpolator: Interpolator? = null,
+        private val openIcon: Drawable? = null,
+        private val closeIcon: Drawable? = null) : View.OnClickListener {
 
     private val animatorSet = AnimatorSet()
     private val height: Int
@@ -41,7 +44,7 @@ class NavigationIconClickListener @JvmOverloads internal constructor(
         val translateY = height - context.resources.getDimensionPixelSize(R.dimen.shr_product_grid_reveal_height)
 
         val animator = ObjectAnimator.ofFloat(sheet, "translationY", (if (backdropShown) translateY else 0).toFloat())
-        animator.duration = 500
+        animator.duration = 250
         if (interpolator != null) {
             animator.interpolator = interpolator
         }
