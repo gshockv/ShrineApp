@@ -1,12 +1,15 @@
 package com.google.codelabs.mdc.kotlin.shrine
 
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.*
+import android.view.animation.AccelerateDecelerateInterpolator
 import com.google.codelabs.mdc.kotlin.shrine.network.ProductEntry
 import com.google.codelabs.mdc.kotlin.shrine.staggeredgridlayout.StaggeredProductCardRecyclerViewAdapter
 import kotlinx.android.synthetic.main.shr_product_grid_fragment.view.*
@@ -24,6 +27,16 @@ class ProductGridFragment : Fragment() {
 
         (activity as AppCompatActivity).setSupportActionBar(view.app_bar)
         initProductGrid(view.recycler_view)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.products_grid.background = context?.getDrawable(R.drawable.shr_product_grid_background_shape)
+        }
+
+        view.app_bar.setNavigationOnClickListener(NavigationIconClickListener(activity!!,
+                view.products_grid,
+                AccelerateDecelerateInterpolator(),
+                ContextCompat.getDrawable(context!!, R.drawable.shr_branded_menu),
+                ContextCompat.getDrawable(context!!, R.drawable.shr_close_menu)))
 
         return view
     }
