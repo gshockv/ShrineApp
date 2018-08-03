@@ -5,4 +5,7 @@ components that implement Material Design. This repo houses the source for the s
 
 This repository is structured as branches. You can checkout an individual branch by running `git checkout 101-starter` or the equivalent for the codelab you are following.
 
-There are some simple scripts for maintaining this repository in the `tools/` directory.
+![](https://github.com/gshockv/ShrineApp/blob/master/kotlin/shrine/scr_login.png)
+![](https://github.com/gshockv/ShrineApp/blob/master/kotlin/shrine/scr_products.png)
+![](https://github.com/gshockv/ShrineApp/blob/master/kotlin/shrine/scr_backdrop_menu.png)
+
